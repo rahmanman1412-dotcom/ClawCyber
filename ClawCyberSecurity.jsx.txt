@@ -1,0 +1,101 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Shield, Lock, Server, Phone } from "lucide-react";
+
+export default function ClawCyberSecurity() {
+  return (
+    <div className="min-h-screen bg-black text-white p-6">
+      <div className="max-w-6xl mx-auto space-y-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-4"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-red-600">
+            CLAW CYBER SECURITY
+          </h1>
+          <p className="text-gray-400 text-lg">
+            Learn Ethical Hacking & Cyber Defense The Right Way
+          </p>
+        </motion.div>
+
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="bg-zinc-900 rounded-2xl shadow-xl">
+            <CardContent className="p-6 space-y-4">
+              <Shield className="w-10 h-10 text-red-500" />
+              <h2 className="text-xl font-semibold">Anti-DDoS Protection</h2>
+              <p className="text-gray-400 text-sm">
+                Learn how to protect servers and websites from Distributed Denial of Service attacks using secure configurations and monitoring tools.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-zinc-900 rounded-2xl shadow-xl">
+            <CardContent className="p-6 space-y-4">
+              <Lock className="w-10 h-10 text-red-500" />
+              <h2 className="text-xl font-semibold">Network Security Basics</h2>
+              <p className="text-gray-400 text-sm">
+                Understand firewalls, encryption, authentication systems, and how to secure personal and business networks.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-zinc-900 rounded-2xl shadow-xl">
+            <CardContent className="p-6 space-y-4">
+              <Server className="w-10 h-10 text-red-500" />
+              <h2 className="text-xl font-semibold">Server Hardening</h2>
+              <p className="text-gray-400 text-sm">
+                Learn how to configure Linux and Windows servers securely to reduce vulnerabilities and prevent attacks.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* About Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="bg-zinc-900 rounded-2xl p-8 shadow-xl space-y-4"
+        >
+          <h2 className="text-2xl font-bold text-red-600">About CLAW</h2>
+          <p className="text-gray-400">
+            CLAW is a cyber security learning group focused on ethical hacking, digital defense, and responsible security research. We teach students how to defend systems — not attack them.
+          </p>
+        </motion.div>
+
+        {/* Contact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="text-center space-y-6"
+        >
+          <h2 className="text-2xl font-bold">Join Our Cyber Class</h2>
+          <p className="text-gray-400">
+            Interested in learning cyber security professionally and ethically?
+          </p>
+
+          <div className="flex justify-center items-center gap-3">
+            <Phone className="text-red-500" />
+            <span className="text-lg font-semibold">+60 14 634 4016</span>
+          </div>
+
+          <Button className="bg-red-600 hover:bg-red-700 rounded-2xl px-6 py-3 text-lg">
+            Contact Now
+          </Button>
+        </motion.div>
+
+        {/* Footer */}
+        <div className="text-center text-gray-600 text-sm pt-10">
+          © 2026 CLAW Cyber Security. Ethical Learning Only.
+        </div>
+      </div>
+    </div>
+  );
+}
